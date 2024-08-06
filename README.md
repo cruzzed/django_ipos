@@ -3,7 +3,7 @@
 This project is solely for educational purposes only.
 
 The project is a simple Python/Tkinter app for cash counting
-validated against an IPOS system database version 5.
+validated against an [IPOS system database version 5](https://inspirasi.biz/produk/detail/KBKAT-20170403132947) .
 
 Functions include:
 -  Login Form
