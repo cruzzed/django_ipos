@@ -145,7 +145,6 @@ def submit(event):
             total += nominals[idx] * int(val)
             print(f'{total - (nominals[idx] * int(val))} + {nominals[idx] * int(val)} = {total}')
     result = total - int(totalakhir)
-    print(f'{total} - {int(totalakhir)} = {total - int(totalakhir)}')
     if result < 0:
         conclusion = f"Kurang: {int(result * -1):,}"
     elif result > 0:
