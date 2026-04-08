@@ -3,6 +3,7 @@ import django
 import os
 from django.utils.timezone import now
 import dotenv
+
 dotenv.read_dotenv()
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_ipos.settings')
 django.setup()
@@ -15,6 +16,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 debug = True
+
 
 def login_form():
 
@@ -67,7 +69,7 @@ while True:
 
 total_rekap = (
     TblIkhd.objects
-        .filter(tanggal__range=(now().date(), (now().date()+ datetime.timedelta(days=1) )))
+        .filter(tanggal__range=(now().date(), (now().date() + datetime.timedelta(days=1))))
         .filter(user1=user1)
         .filter(kantordari="UTM")
         .filter(tipe__in=("KSR", "TRBCIMPKSR"))
