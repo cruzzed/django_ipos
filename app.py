@@ -146,13 +146,13 @@ def submit(event):
             print(f'{total - (nominals[idx] * int(val))} + {nominals[idx] * int(val)} = {total}')
     result = total - int(totalakhir)
     print(f'{total} - {int(totalakhir)} = {total - int(totalakhir)}')
-    if result <= -500000:
-        conclusion = f"Kurang, Mohon dihitung ulang dengan lebih seksama dan pastikan input nominal anda sesuai, setelah itu Submit ulang."
-    elif result < 0:
+    if result < 0:
         conclusion = f"Kurang: {int(result * -1):,}"
-    else:
+    elif result > 0:
         conclusion = f"Lebih: {int(result):,}"
-    
+    else:
+        conclusion = "PAS."
+
     popup = messagebox.showinfo(
         master=window,
         title="Hasil",
