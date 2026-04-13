@@ -104,7 +104,7 @@ ent_tgl.grid(row=0, column=1, sticky="")
 
 # List of field labels
 nominals = [
-    100000, 75000, 50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 1
+    100_000, 75_000, 50_000, 20_000, 10_000, 5_000, 2_000, 1_000, 500, 200, 100, 1
 ]
 
 entries = []
@@ -141,9 +141,7 @@ def submit(event):
         if not val:
             continue
         else:
-            print(f'{int(val)} * {int(nominals[idx])} = {nominals[idx] * int(val)}')
             total += nominals[idx] * int(val)
-            print(f'{total - (nominals[idx] * int(val))} + {nominals[idx] * int(val)} = {total}')
     result = total - int(totalakhir)
     if result < 0:
         conclusion = f"Kurang: {int(result * -1):,}"
